@@ -47,11 +47,10 @@
 			<li><a href="#" title="Перфораторы">Перфораторы</a></li>
 		</ul>
 		<h1 class="title">Перфораторы</h1>
-		<section class="catalog-filter">
+		<form class="catalog-filter">
 			<h2 title="Фильтр товаров">Фильтр:</h2>
-			<form>
 				<fieldset title="Цена" class="filter-title">
-					<legend class="filter-title">Цена:</legend>
+					<legend class="filter-title">Цена:</legend>	
 					<label for="filter-price-min" class="filter-title">Цена</label>
 					<input type="number" class="filter-price" id="filter-price-min" min="0" value="0">
 					<input type="number" class="filter-price" id="filter-price-max" min="0" value="30000">	
@@ -89,21 +88,22 @@
 					Сетевые</label>
 				</fieldset>
 				<button type="submit" class="filter-button">Показать</button>
-			</form>
-		</section>
+		</form>
 		<div class="catalog">
 			<section class="catalog-sort">
 				<h2 class="visually-hidden" title="Сортировка товаров">Сортировка</h2>
-				<ul>
-					<li class="sort-price">
+				<ul class="sort-type">
+					<li class="sortby-price">
 						По цене
 					</li>
-					<li class="sort-type">
+					<li class="sortby-type">
 						<a href="#" title="По типу">По типу</a>
 					</li>
-					<li class="sort-function">
+					<li class="sortby-function">
 						<a href="#" title="По функционалу">По функционалу</a>
 					</li>
+				</ul>
+				<ul class="sort-order">
 					<li class="sort-asc">
 						<a href="#" title="По возрастанию">По возрастанию</a>
 					</li>
