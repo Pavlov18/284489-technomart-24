@@ -47,8 +47,9 @@
 			<li><a href="#" title="Перфораторы">Перфораторы</a></li>
 		</ul>
 		<h1 class="title">Перфораторы</h1>
-		<form class="catalog-filter">
+		<section class="catalog-filter">
 			<h2 title="Фильтр товаров">Фильтр:</h2>
+			<form>
 				<fieldset title="Цена" class="filter-title">
 					<legend class="filter-title">Цена:</legend>	
 					<label for="filter-price-min" class="filter-title">Цена</label>
@@ -88,29 +89,20 @@
 					Сетевые</label>
 				</fieldset>
 				<button type="submit" class="filter-button">Показать</button>
-		</form>
+			</form>
+		</section>
 		<div class="catalog">
 			<section class="catalog-sort">
-				<h2 class="visually-hidden" title="Сортировка товаров">Сортировка</h2>
-				<ul class="sort-type">
-					<li class="sortby-price">
-						По цене
-					</li>
-					<li class="sortby-type">
-						<a href="#" title="По типу">По типу</a>
-					</li>
-					<li class="sortby-function">
-						<a href="#" title="По функционалу">По функционалу</a>
-					</li>
-				</ul>
-				<ul class="sort-order">
-					<li class="sort-asc">
-						<a href="#" title="По возрастанию">По возрастанию</a>
-					</li>
-					<li class="sort-desc">
-						<a href="#" title="По убыванию">По убыванию</a>
-					</li>
-				</ul>
+				<h2 class="sotr-title" title="Сортировка товаров">Сортировка</h2>
+				<div class="sort-type">
+					<a class="sortby-price" href="#" title="По цене">По цене</a>
+					<a class="sortby-type" href="#" title="По типу">По типу</a>
+					<a class="sortby-function" href="#" title="По функционалу">По функционалу</a>
+				</div>
+				<div class="sort-order">
+					<a class="sort-asc active" href="#" title="По возрастанию">По возрастанию</a>
+					<a class="sort-desc" href="#" title="По убыванию">По убыванию</a>
+				</div>
 			</section>
 			<section class="catalog-list">
 				<h2>Каталог товаров</h2>
