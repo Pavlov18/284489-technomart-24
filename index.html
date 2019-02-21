@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Техномарт - Главная</title>
 	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
@@ -16,7 +17,9 @@
 				</a>
 				<section class="search">
 					<h2 class="visually-hidden">Поиск по сайту</h2>
-					<input type="search" name="search" method="post" placeholder="Поиск:">
+ 
+						<input type="search" name="search" placeholder="Поиск:">
+ 
 				</section>
 				<ul class="shop-block">
 					<li><a class="bookmarks" href="#">Закладки: 0</a></li>
@@ -56,8 +59,8 @@
 			<div class="promo-block">
 				<section class="promo-products">
 					<h2 class="visually-hidden">Основная продукция</h2>
-					<ul class="promo-products-list">
-						<li class="promo-item material">
+					<ul>
+						<li class="promo-item material new">
 							<h3>Материалы</h3>
 							<a href="#" title="На любой вкус">На любой вкус</a>
 						</li>
@@ -82,32 +85,32 @@
 							</div>
 							<div class="slide active">
 								<h3>Дрели</h3>
-								<p>Настоящие мужские игрушки</p>
+								<p>Соседям на радость!</p>
 								<img src="img/index/slide-2.jpg" width="620" height="266" alt="Перфораторы">
 							</div>
 						</figure>
-						<button class="slider-button-back visually-hidden">Назад</button> 
-						<button class="slider-button-next visually-hidden">Вперед</button>
-						<a class="slider-catalog" href="#">Открыть каталог</a>
+						<button class="slider-button-back">Назад</button> 
+						<button class="slider-button-next">Вперед</button>
+						<a class="slider-catalog button	" href="#">Открыть каталог</a>
 						<ul class="slider-indicators">
-							<li class="slide-radio indicator-current">
-								<button class="slider-button">Первый слайд</button>
+							<li>
+								<button class="slide-radio">Первый слайд</button>
 							</li>
-							<li class="slide-radio indicator-current">
-								<button>Второй слайд</button>
+							<li>
+								<button class="slide-radio indicator-current">Второй слайд</button>
 							</li>
 						</ul>
 					</section>
 					<section class="features">
 						<h3 class="visually-hidden">Преимущества</h3>
-						<ul>
+						<ul class="promo-list">
 							<li class="promo-item discount">
 								<h3>Скидки 50%</h3>
 								<a href="#" title="На 350 товаров">На 350 товаров</a>
 							</li>
 							<li class="promo-item delivery">
 								<h3>Доставка</h3>
-								<a href="#">Бесплатно</a>
+								<a href="#" title="Бесплатно">Бесплатно</a>
 							</li>
 						</ul>
 					</section>
@@ -115,39 +118,64 @@
 			</div>
 			<section class="popular popular-products">
 				<header class="popular-header">
-					<h2>Попоулярные товары</h2>
-					<a class="popular-all-link index-link" href="#">Все популярные товары</a>
+					<h2>Попоулярные товары:</h2>
+					<a class="button" href="#">Все популярные товары</a>
 				</header>
 				<ul class="product-list">
-					<li class="product-item">
-						<img src="img/product-bfg9000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 9000">
+					<li class="product-item new">
+						<img src="img/product-bfg9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
 						<h3>Перфоратор BOSCH  BFG 9000</h3>
-						<span class="old-price">32500 р.</span>
-						<span class="price">25500 р.</span>
+						<div class="price-block">
+							<span class="old-price">32500 р.</span>
+							<span class="price">2550 р.</span>
+						</div>
+						<div class="pruduct-buttons">
+							<a class="button-buy">Купить</a>
+							<a class="button-favorite">В закладки</a>
+						</div>
+					</li>
+					<li class="product-item new">
+						<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+						<h3>Перфоратор BOSCH  BFG 3000</h3>
+						<div class="price-block">
+							<span class="old-price">22500 р.</span>
+							<span class="price">15500 р.</span>
+						</div>
+						<div class="pruduct-buttons">
+							<a class="button-buy">Купить</a>
+							<a class="button-favorite">В закладки</a>
+						</div>
 					</li>
 					<li class="product-item">
-						<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-						<h3>Перфоратор BOSCH BFG 3000</h3>
-						<span class="old-price">22500 р.</span>
-						<span class="price">15500 р.</span>
-					</li>
-					<li class="product-item">	
 						<img src="img/product-bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-						<h3>Перфоратор BOSCH BFG 6000</h3>
-						<span class="old-price">30500 р.</span>
-						<span class="price">25500 р.</span>
+						<h3>Перфоратор BOSCH  BFG 6000</h3>
+						<div class="price-block">
+							<span class="old-price">30500 р.</span>
+							<span class="price">25500 р.</span>
+						</div>
+						<div class="pruduct-buttons">
+							<a class="button-buy">Купить</a>
+							<a class="button-favorite">В закладки</a>
+						</div>
 					</li>
 					<li class="product-item">
 						<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-						<h3>Перфоратор BOSCH BFG 2000</h3>
-						<span class="price">12500 р.</span>
+						<h3>Перфоратор BOSCH  BFG 2000</h3>
+						<div class="price-block">
+							<span class="old-price"></span>
+							<span class="price">12500 р.</span>
+						</div>
+						<div class="pruduct-buttons">
+							<a class="button-buy">Купить</a>
+							<a class="button-favorite">В закладки</a>
+						</div>
 					</li>
 				</ul>
 			</section>
 			<section class="popular popular-maker">
 				<header class="popular-header">
-					<h2>Попоулярные производители</h2>
-					<a class="index-link" href="#">Все производители</a>
+					<h2>Попоулярные производители:</h2>
+					<a class="button" href="#">Все производители</a>
 				</header>
 				<ul class="popular-maker-list">
 					<li class="maker-list-item">
@@ -232,12 +260,13 @@
 					<li>Автотрейдинг</li>
 					<li>ЖелДорЭкспедиция</li>
 				</ul>
+				<a class="button" href="#" title="Подробнее о компании">Подробнее о компании</a>	
 			</section>
 			<section class="index-contacts">
 				<h2>Контакты</h2>	
 				<span class="contacts-description">Вы можете забрать товар сами, заехав в наш офис:</span>
 				<img src="img/index/map.jpg" alt="Карта">
-				<a class="index-link" title="Заблудились? Напишите нам!">Заблудились? Напишите нам!</a>
+				<a class="button" title="Заблудились? Напишите нам!">Заблудились? Напишите нам!</a>
 			</section>
 		</div>
 	</main>
