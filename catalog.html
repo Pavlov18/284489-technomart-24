@@ -79,37 +79,49 @@
 				<section class="filter-products">
 					<h2>Фильтр:</h2>
 					<form>
-						<fieldset title="Цена" class="filter-title">
-							<legend class="filter-title">Цена:</legend>	
-							<label for="filter-price-min" class="filter-title">Цена</label>
-							<input type="number" class="filter-price" id="filter-price-min" min="0" value="0">
-							<input type="number" class="filter-price" id="filter-price-max" min="0" value="30000">	
+						<fieldset title="Цена">
+							<legend>Цена:</legend>
+							<div class="filter-price-block">
+								<div class="range-controls">
+									<div class="scale">
+										<div class="bar"></div>
+										<div class="range-toggle range-toggle-min"></div>
+										<div class="range-toggle range-toggle-max"></div>
+									</div>
+
+								</div>
+								<label for="filter-price-min" class="visually-hidden">Цена от</label>
+								<input type="number" class="filter-price" id="filter-price-min" min="0" value="0">
+								<span>—</span>
+								<label for="filter-price-max" class="visually-hidden">Цена до</label>
+								<input type="number" class="filter-price" id="filter-price-max" min="0" value="30000">
+							</div>
 						</fieldset>	
-						<fieldset title="Производители" class="filter-title">
+						<fieldset title="Производители">
 							<legend>Производители</legend>
-							<input type="checkbox" id="filter-bosch" checked>
-							<label class="filter-name" for="filter-bosch" >
+							<input class="visually-hidden filter-name" type="checkbox" id="filter-bosch" checked>
+							<label for="filter-bosch" >
 								bosch
 							</label>
-							<input type="checkbox" id="filter-interscol">
-							<label class="filter-name" for="filter-interscol">
+							<input class="visually-hidden filter-name" type="checkbox" id="filter-interscol">
+							<label for="filter-interscol">
 								Интерскол
 							</label>
-							<input type="checkbox" id="filter-makita" checked>
-							<label class="filter-name" for="filter-makita">
+							<input class="visually-hidden filter-name" type="checkbox" id="filter-makita" checked>
+							<label for="filter-makita">
 								Makita
 							</label>
-							<input type="checkbox" id="filter-dewalt">
-							<label class="filter-name" for="filter-dewalt">
+							<input class="visually-hidden filter-name" type="checkbox" id="filter-dewalt">
+							<label for="filter-dewalt">
 								Dewalt
 							</label>
-							<input type="checkbox" id="filter-hitachi">
-							<label class="filter-name" for="filter-hitachi">
+							<input class="visually-hidden filter-name" type="checkbox" id="filter-hitachi">
+							<label for="filter-hitachi">
 								Hitachi
 							</label>
 						</fieldset>
 						<fieldset title="Питание" class="filter-block">
-							<legend class="filter-title">Питание</legend>
+							<legend>Питание</legend>
 							<input type="radio" name="power" id="battery" value="Аккумуляторные" checked>
 							<label for="battery" class="filter-name">
 							Аккумуляторные</label> 

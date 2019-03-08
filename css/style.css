@@ -819,10 +819,45 @@ a.order:active {
 	bottom: 20px;
 }
 
-.product-list li {
+
+.popular-maker ul,
+.catalog-list ul {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0;
+	margin-left: -20px;
+	padding: 0;
+
+	list-style: none;
+	font-family: 'PT sans', arial, sans-serif;
+	text-transform: none;
+}
+
+.product-item,
+.maker-list-item {
 	position: relative;
-	width: 218px;
+
+	width: 220px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+
 	border: 1px solid #EAEAEA;
+}
+
+.product-item:hover	.pruduct-buttons,
+.product-item:focus	.pruduct-buttons {
+	display: block;
+}
+
+.product-item:hover,
+.product-item:focus {
+	box-shadow: 0 10px 25px 0 rgba(41,52,73,0.50);
+}
+
+.product-item:hover img,
+.product-item:focus img {
+	opacity: 0;
 }
 
 .product-list h3 {
@@ -915,7 +950,6 @@ span.price {
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
 	border-bottom: 3px solid #518534;
-
 }
 
 .button-buy::before {
@@ -954,40 +988,6 @@ span.price {
 	height: 170px;
 }
 
-.product-item:hover	.pruduct-buttons,
-.product-item:focus	.pruduct-buttons {
-	display: block;
-}
-
-.product-item:hover,
-.product-item:focus {
-	box-shadow: 0 10px 25px 0 rgba(41,52,73,0.50);
-}
-
-.product-item:hover img,
-.product-item:focus img {
-	opacity: 0;
-}
-
-.popular {
-	margin-bottom: 20px;
-}
-
-.popular ul,
-.product-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-family: 'PT sans', arial, sans-serif;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-
 .popular-header {
 	display: flex;
 	justify-content: space-between;
@@ -1022,12 +1022,9 @@ span.price {
 .maker-list-item a {
 	position: relative;
 	display: block;
-	margin-bottom: 20px;	
 
 	width: 220px;
 	height: 145px;
-
-	border: solid 1px #EAEAEA;
 }
 
 .popular-maker img {
@@ -1544,6 +1541,7 @@ right: 0
 	color: #32425C;
 	line-height: 30px;  
 	font-size: 30px;
+	text-transform: uppercase;
 	font-weight: normal;
 
 	background-color: #F2F6F8;
@@ -1552,6 +1550,8 @@ right: 0
 .catalog-filter-cover {
 	display: flex;
 	justify-content: space-between;
+
+	text-transform: uppercase;
 }
 
 .filter-products h2,
@@ -1559,11 +1559,165 @@ right: 0
 	padding: 10px 18px;
 	margin: 0;
 	margin-bottom: 20px;
+
 	line-height: 18px;
 	font-size: 13px;
 	color: #000;
-	background-color: #F7F3EC;
 	text-transform: uppercase;
+	font-weight: normal;
+
+	background-color: #F7F3EC;
+	border-radius: 4px;
+
+}
+
+.filter-products {
+	width: 220px;
+}
+
+.filter-products fieldset {
+	padding: 0;
+	margin: 0;
+	padding-bottom: 25px;
+	margin-bottom: 18px;
+
+	border:none;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+.filter-products legend {
+	font-weight: bold;
+	margin-bottom: 18px;
+}
+
+.filter-price-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 8px;
+ 
+	width: 100%;
+	height: 80px;
+
+	background-color: #F7F3EC;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.range-controls .scale {
+	position: absolute;
+top: 50%;
+right: 0;
+left: 0;	
+margin: 0 auto;
+
+  height: 2px;
+	width: 180px;
+  background: #D7DCDE;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #00CA74;
+}
+
+
+
+
+.range-toggle {
+	content: "";
+  position: absolute;
+  top: -9px;
+	
+
+  width: 4px;
+  height: 4px;
+
+  background: #ABABAB;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(171, 171, 171, 0.3);
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.filter-price-block span {
+	display: block;
+	margin: 0 2px;
+	font-size: 16px;
+	line-height: 18px;
+
+}
+
+.filter-price-block input[type="number"] {
+	display: block;
+	position: relative;
+	width: 95px;
+
+	margin: 0;
+	padding: 10px;
+
+	text-align: center;
+
+	border: none;
+	border-radius: 4px;
+	background-color: #F7F3EC;
+}
+
+.filter-price-block input[type="number"]::-webkit-outer-spin-button,
+.filter-price-block input[type="number"]::-webkit-inner-spin-button {
+ 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.filter-products label {
+	display: block;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.catalog {
+	width: 700px;
 }
 
 .catalog-sort {
@@ -1571,16 +1725,13 @@ right: 0
 }
 
 .catalog-sort h2 {
-	font-size: 13px;
 	margin: 0;
+
+	font-size: 13px;
+	font-weight: normal;
 }
 
 
 
-.filter-products {
-	width: 220px;
-}
 
-.catalog {
-	width: 700px;
-}
+
