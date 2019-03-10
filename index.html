@@ -52,9 +52,9 @@
 		</div>
 		<nav class="container">
 			<ul class="main-navigation">
-				<li class="current">Главная</li>
+				<li><a class="current" title="Главная">Главная</a></li>
 				<li><a href="#" title="Компания">Компания</a></li>
-				<li><a href="#" title="Каталог">Каталог</a></li>
+				<li><a href="catalog.html" title="Каталог">Каталог</a></li>
 				<li><a href="#" title="Новости">Новости</a></li>
 				<li><a href="#" title="Спецпредложения">Спецпредложения</a></li>
 				<li><a href="#" title="Доставка">Доставка</a></li>
@@ -102,7 +102,7 @@
 							<button class="slider-button-back">Назад</button> 
 							<button class="slider-button-next">Вперед</button>
 						</div>
-						<a class="slider-catalog button" href="#">Открыть каталог</a>
+						<a class="slider-catalog button" href="catalog.html">Открыть каталог</a>
 						<ul class="slider-indicators">
 							<li>
 								<input type="radio" class="slide-radio" id="slide-1" name="slider-button" value="1">
@@ -311,7 +311,7 @@
 						<ul class="footer-main-menu">
 							<li><a href="#" title="Компания">Компания</a></li>
 							<li><a href="#" title="Новости">Новости</a></li>
-							<li><a href="#" title="Каталог">Каталог</a></li>
+							<li><a href="catalog.html" title="Каталог">Каталог</a></li>
 							<li><a href="#" title="Доставка">Доставка</a></li>
 							<li><a href="#" title="Контакты">Контакты</a></li>
 						</ul>
@@ -352,23 +352,32 @@
 						<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 					</p>
 					<p class="development">Разработано —
-						<a href="htmlacademy.ru">htmlacademy.ru</a>
+						<a href="https://htmlacademy.ru/intensive/htmlcss" title="Профессиональный HTML и CSS, уровень 1" target="_blank">htmlacademy.ru</a>
 					</p>
 				</div>
 			</div>
 		</footer>
-		<section class="modal-message">
+		<section class="modal modal-message">
 			<h2 class="visually-hidden">Форма отправки письма</h2>
 			<form action="#" method="get" name="message-form">
-				<label> Ваше имя:
-					<input type="text" name="name" placeholder="Имя Фамилия">
-				</label>
-				<label> Ваш e-mail:
-					<input type="email" name="email" placeholder="email@example.com">
-				</label>
-				<textarea placeholder="В свободной форме"></textarea>
-				<button class="send-message" type="submit">Отправить</button>
-				<button class="modal-close" type="button">Закрыть</button>
+				<div class="modal-fields">
+					<p>
+						<label>Ваше имя:</label>
+						<input class="modal-field" type="text" name="name" placeholder="Имя Фамилия">
+					</p>
+					<p>
+						<label>Ваш e-mail:</label>
+						<input class="modal-field" type="email" name="email" placeholder="email@example.com">
+					</p>
+					<p>
+						<label>Текст письма:</label>
+						<textarea class="modal-field" placeholder="В свободной форме" rows="5"></textarea>
+					</p>
+				</div>
+				<div class="modal-buttons">
+					<button class="send-message button" type="submit">Отправить</button>
+					<button class="modal-close" type="button">Закрыть</button>
+				</div>
 			</form>
 		</section>
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
