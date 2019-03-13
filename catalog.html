@@ -31,7 +31,7 @@
 			</div>
 		</div>
 		<div class="header-bottom container">
-			<p class="header-description">Интернет-магазин  строительных материалов <br>
+			<p class="header-description">Интернет-магазин строительных материалов<br>
 				и инструментов для ремонта
 			</p>
 			<div class="header-contacts">
@@ -65,11 +65,6 @@
 				</li>
 			</ul>
 			</div>
-
-
-
-
-
 			<nav class="container">
 				<ul class="main-navigation">
 					<li><a href="index.html" title="Главная">Главная</a></li>
@@ -99,7 +94,7 @@
 					<section class="filter-products">
 						<h2>Фильтр:</h2>
 						<form>
-							<fieldset title="Цена">
+							<fieldset title="Цена" class="filter-price">
 								<legend>Цена:</legend>
 								<div class="filter-price-block">
 									<div class="range-controls">
@@ -116,8 +111,8 @@
 									<input type="number" class="filter-price" id="filter-price-max" min="0" value="30000">
 								</div>
 							</fieldset>	
-							<fieldset title="Производители">
-								<legend>Производители</legend>
+							<fieldset title="Производители" class="filter-maker">
+								<legend>Производители:</legend>
 								<input class="visually-hidden filter-checkbox" type="checkbox" id="filter-bosch" checked>
 								<label for="filter-bosch" >
 									bosch
@@ -139,10 +134,10 @@
 									Hitachi
 								</label>
 							</fieldset>
-							<fieldset title="Питание" class="radio-list">
+							<fieldset title="Питание" class="filter-power">
 								<legend>Питание</legend>
-								<input class="visually-hidden filter-radio" type="radio" name="power" id="battery" value="Аккумуляторные" checked>
-								<label for="battery" class="filter-name">
+								<input class="visually-hidden filter-radio" type="radio" name="battery" id="battery" value="Аккумуляторные" checked>
+								<label for="battery">
 								Аккумуляторные</label> 
 								<input class="visually-hidden filter-radio" type="radio" name="power" id="utility-power" value="Сетевые">
 								<label for="utility-power">
@@ -172,8 +167,8 @@
 							<h2 class="visually-hidden">Каталог товаров</h2>
 							<ul class="product-list">
 								<li class="product-item">
-									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-									<h3>Перфоратор BOSCH  BFG 3000</h3>
+									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 3000">
+									<h3>Перфоратор BOSCH BFG 3000</h3>
 									<div class="price-block">
 										<span class="old-price">22500 р.</span>
 										<span class="price">15500 р.</span>
@@ -184,8 +179,8 @@
 									</div>
 								</li>
 								<li class="product-item">
-									<img src="img/product-bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-									<h3>Перфоратор BOSCH  BFG 6000</h3>
+									<img src="img/product-bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 6000">
+									<h3>Перфоратор BOSCH BFG 6000</h3>
 									<div class="price-block">
 										<span class="old-price">30500 р.</span>
 										<span class="price">25500 р.</span>
@@ -196,8 +191,8 @@
 									</div>
 								</li>
 								<li class="product-item new-flag">
-									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-									<h3>Перфоратор BOSCH  BFG 2000</h3>
+									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
+									<h3>Перфоратор BOSCH BFG 2000</h3>
 									<div class="price-block">
 										<span class="old-price"></span>
 										<span class="price">12500 р.</span>
@@ -208,8 +203,8 @@
 									</div>
 								</li>
 								<li class="product-item">
-									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-									<h3>Перфоратор BOSCH  BFG 3000</h3>
+									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 3000">
+									<h3>Перфоратор BOSCH BFG 3000</h3>
 									<div class="price-block">
 										<span class="old-price">22500 р.</span>
 										<span class="price">15500 р.</span>
@@ -220,8 +215,8 @@
 									</div>
 								</li>
 								<li class="product-item">
-									<img src="img/product-bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-									<h3>Перфоратор BOSCH  BFG 6000</h3>
+									<img src="img/product-bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 6000">
+									<h3>Перфоратор BOSCH BFG 6000</h3>
 									<div class="price-block">
 										<span class="old-price">30500 р.</span>
 										<span class="price">25500 р.</span>
@@ -232,8 +227,8 @@
 									</div>
 								</li>
 								<li class="product-item new-flag">
-									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-									<h3>Перфоратор BOSCH  BFG 2000</h3>
+									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
+									<h3>Перфоратор BOSCH BFG 2000</h3>
 									<div class="price-block">
 										<span class="old-price"></span>
 										<span class="price">12500 р.</span>
@@ -244,8 +239,8 @@
 									</div>
 								</li>
 								<li class="product-item new-flag">
-									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-									<h3>Перфоратор BOSCH  BFG 2000</h3>
+									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
+									<h3>Перфоратор BOSCH BFG 2000</h3>
 									<div class="price-block">
 										<span class="old-price"></span>
 										<span class="price">12500 р.</span>
@@ -256,8 +251,8 @@
 									</div>
 								</li>
 								<li class="product-item">
-									<img src="img/product-bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-									<h3>Перфоратор BOSCH  BFG 6000</h3>
+									<img src="img/product-bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 6000">
+									<h3>Перфоратор BOSCH BFG 6000</h3>
 									<div class="price-block">
 										<span class="old-price">30500 р.</span>
 										<span class="price">25500 р.</span>
@@ -268,8 +263,8 @@
 									</div>
 								</li>
 								<li class="product-item new-flag">
-									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-									<h3>Перфоратор BOSCH  BFG 2000</h3>
+									<img src="img/product-bfg2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
+									<h3>Перфоратор BOSCH BFG 2000</h3>
 									<div class="price-block">
 										<span class="old-price"></span>
 										<span class="price">12500 р.</span>
@@ -301,19 +296,19 @@
 		<footer class="main-footer">
 			<div class="footer-company-info">
 				<div class="container">
-					<div class="logo-adress">
+					<div class="footer-logo-contacts">
 						<a class="main-logo footer-logo" href="index.html" title="Логотип «Техномарт» ">
 							<img src="img/logo-technomart.svg" width="168" height="30" alt="Логотип «Техномарт» ">
 						</a>
-						<address class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </address>
-						+7 (812) 555-05-55
+						<address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+						<p>+7 (812) 555-05-55<p>
 					</div>
 					<section class="footer-menu">
 						<h2 class="visually-hidden">Нижнее навигационное меню</h2>
 						<ul class="footer-main-menu">
 							<li><a href="#" title="Компания">Компания</a></li>
 							<li><a href="#" title="Новости">Новости</a></li>
-							<li><a href="#" title="Каталог">Каталог</a></li>
+							<li><a href="catalog.html" title="Каталог">Каталог</a></li>
 							<li><a href="#" title="Доставка">Доставка</a></li>
 							<li><a href="#" title="Контакты">Контакты</a></li>
 						</ul>
@@ -330,7 +325,7 @@
 				<div class="container">
 					<section class="footer-copyright">
 						<h2 class="visually-hidden">Авторские права</h2>
-						© 2010–2019 Компания «Техномарт» <br>
+						© 2010–2019 Компания «Техномарт»<br>
 						Все права защищены
 					</section>
 					<ul class="social-links">

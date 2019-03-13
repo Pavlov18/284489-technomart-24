@@ -442,7 +442,7 @@ a.cart::before {
 
 .login svg,
 .logined svg {
-	margin-right: 11px;
+	margin-right: 16px;
 }
 
 .user-navigation a:hover svg path,
@@ -512,7 +512,7 @@ a.cart::before {
 }
 
 .my-orders a {
-	margin-right: 18px;
+	margin-right: 12px;
 }
 
 .login-account a {
@@ -523,7 +523,7 @@ a.cart::before {
 	content: "";
 
 	position: absolute;
-	left: -11px;
+	left: -8px;
 	top: 5px;
 
 	width: 6px;
@@ -1470,6 +1470,7 @@ p.services-description {
 
 .breadcrumbs a {
 	color: #000;
+	letter-spacing: 0.1px;
 }
 
 .catalog-page h1 {
@@ -1504,7 +1505,7 @@ p.services-description {
 	padding: 10px 15px;
 	padding-left: 18px;
 	margin: 0;
-	margin-bottom: 20px;
+	margin-bottom: 17px;
 
 	line-height: 18px;
 	font-size: 13px;
@@ -1512,6 +1513,7 @@ p.services-description {
 	text-transform: uppercase;
 	font-weight: normal;
 	vertical-align: middle;
+	letter-spacing: 0.2px;
 
 	background-color: #F7F3EC;
 	border-radius: 4px;
@@ -1524,21 +1526,38 @@ p.services-description {
 .filter-products fieldset {
 	padding: 0;
 	margin: 0;
-	margin-bottom: 18px;
+	margin-bottom: 22px;
 
 	border:none;
 	border-bottom: 1px solid #E5E5E5;
 }
 
-.filter-products fieldset:last-of-type {
-	margin-bottom: 46px;
+fieldset.filter-price {
+    padding-bottom: 9px;
 
+    letter-spacing: 0.6px;
+}
+
+fieldset.filter-maker {
+	margin-bottom: 26px;
+
+	letter-spacing: 0.6px;
+}
+
+fieldset.filter-power {
+	margin-bottom: 58px;
+
+	letter-spacing: 1.2px;
 	border: none;
 }
 
 .filter-products legend {
 	font-weight: bold;
-	margin-bottom: 18px;
+	margin-bottom: 19px;
+}
+
+.filter-power legend {
+	margin-bottom: 20px;
 }
 
 .filter-price-block {
@@ -1645,9 +1664,10 @@ p.services-description {
 
 	display: block;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 21px;
 	padding-left: 34px;
 
+    letter-spacing: 0.2px;
 	line-height: 19px;
 	font-size: 15px;
 }
@@ -1722,7 +1742,7 @@ p.services-description {
 
 .filter-button {
 	width: 140px;
-	padding: 10px 0;
+	padding: 9px 0;
 
 	text-transform: uppercase;
 	line-height: 18px;
@@ -1788,7 +1808,7 @@ p.services-description {
 	content: "";
 
 	position: absolute;
-	bottom: 2px;
+	bottom: 1px;
 	left: 0;
 
 	width: 100%;
@@ -1812,7 +1832,7 @@ p.services-description {
 .sort-order {
 	display: flex;
 	justify-content: space-between;
-	width: 43px;
+	width: 44px;
 	margin: auto 0;
 }
 
