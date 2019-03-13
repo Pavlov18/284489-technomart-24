@@ -31,7 +31,6 @@ img {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
 	position: absolute;
-
 	width: 1px;
 	height: 1px;
 	margin: -1px;
@@ -442,7 +441,7 @@ a.cart::before {
 
 .login svg,
 .logined svg {
-	margin-right: 16px;
+	margin-right: 13px;
 }
 
 .user-navigation a:hover svg path,
@@ -470,7 +469,9 @@ a.cart::before {
 }
 
 .user a {
-	padding: 11px 10px;
+	padding: 11px 0;
+	padding-left: 13px;
+    padding-right: 10px;
 }
 
 .logout {
@@ -556,6 +557,7 @@ a.cart::before {
 	color: #fff;
 	padding: 19px 30px;
 
+	letter-spacing: 0.1px;
 	font-size: 17px;
 	line-height: 17px;
 }
@@ -990,7 +992,7 @@ span.price {
 	top: 0;
 
 	display: none;
-	padding: 44px;
+	padding: 42px;
 
 	font-family: 'Cuprum', arial, sans-serif;
 	text-align: center;
@@ -1044,7 +1046,7 @@ span.price {
 .button-favorite {
 	margin-top: 10px;
 	padding: 6px;
-	padding-left: 34px;
+	padding-left: 32px;
 
 	font-size: 14px;
 	color: #32425C;
@@ -1341,13 +1343,18 @@ p.services-description {
 }
 
 .about-company .company-description {
-	margin-bottom: 18px;
+	margin-bottom: 20px;
+	width: 520px;
+
+    letter-spacing: 0.1px;
 }
 
 .about-company p {
-	width: 390px;
+	width: 400px;
     margin: 0;
-    margin-top: 26px;
+    margin-top: 24px;
+
+    letter-spacing: 0px;
 }
 
 .about-company ul {
@@ -1446,7 +1453,7 @@ p.services-description {
 	text-transform: uppercase;
 }
 
-.breadcrumbs li::after:not(:last-child) {
+.breadcrumbs li:not(:last-child)::after {
 	position: absolute;
 	content: "";
 	top: 2px;
@@ -1505,7 +1512,7 @@ p.services-description {
 	padding: 10px 15px;
 	padding-left: 18px;
 	margin: 0;
-	margin-bottom: 17px;
+
 
 	line-height: 18px;
 	font-size: 13px;
@@ -1521,6 +1528,10 @@ p.services-description {
 
 .filter-products {
 	width: 220px;
+}
+
+.filter-products h2 {
+	margin-bottom: 18px;
 }
 
 .filter-products fieldset {
@@ -1767,6 +1778,7 @@ fieldset.filter-power {
 .catalog-sort {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 20px;
 }
 
 .catalog-sort h2 {
@@ -1894,7 +1906,7 @@ fieldset.filter-power {
 
 .pagination a {
 	display: inline-block;
-	padding: 10px;
+	padding: 9px;
 	margin-left: 10px;
 	margin-bottom: 10px;
 
@@ -1931,16 +1943,22 @@ a.pagination-current {
 }
 
 .category-about {
-	padding: 68px 0;
+	padding-bottom: 68px;
+	padding-top: 65px;
 
 	color: #000;
+	letter-spacing: 0.14px;
 
 	background-color: #F2F6F8;
 }
 
 .category-about h2 {
-	margin-bottom: 24px;
+	margin: 0;
+	margin-bottom: 26px;
 
+    font-family: 'Cuprum', arial, sans-serif;
+	line-height: 30px;
+	font-size: 30px;
 	font-weight: normal;
 	text-transform: uppercase;
 }
@@ -1950,6 +1968,10 @@ a.pagination-current {
 
 	line-height: 24px;
 	font-size: 13px;
+}
+
+.category-about p:first-of-type {
+	letter-spacing: 0;
 }
 
 .footer-company-info ul {
@@ -2048,7 +2070,7 @@ a.pagination-current {
 
 .footer-links {
 	padding-top: 37px;
-	padding-bottom: 40px;
+	padding-bottom: 29px;
 
 	color: #fff;
 
@@ -2128,7 +2150,7 @@ a.pagination-current {
 	content: "";
 
 	position: absolute;
-	top: 0;
+	top: -4px;
 	bottom: 0;
 	left: 0;
 	right: 0;

@@ -308,10 +308,10 @@
 				<section class="index-contacts">
 					<h2>Контакты</h2>	
 					<div class="company-description">Вы можете забрать товар сами, заехав в наш офис:</div>
-					<a class="" href="https://goo.gl/maps/TSDn2tFK6os" title="Открыть карту">
+					<a class="map-open" href="https://goo.gl/maps/TSDn2tFK6os" title="Открыть карту">
 						<img src="img/index/map.jpg" alt="Карта">
 					</a>
-					<a class="button" href="#" title="Заблудились? Напишите нам!">Заблудились? Напишите нам!</a>
+					<a class="button write-me" href="#" title="Заблудились? Напишите нам!">Заблудились? Напишите нам!</a>
 				</section>
 			</div>
 		</main>
@@ -382,7 +382,7 @@
 				<div class="modal-fields">
 					<p>
 						<label>Ваше имя:</label>
-						<input class="modal-field" type="text" name="name" placeholder="Имя Фамилия">
+						<input class="modal-field" type="text" name="fullname" placeholder="Имя Фамилия">
 					</p>
 					<p>
 						<label>Ваш e-mail:</label>
@@ -400,5 +400,29 @@
 			</form>
 		</section>
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+		<script>
+	var write = document.querySelector(".write-me");
+	var popupmessage = document.querySelector(".modal-message");
+	var close = popupmessage.querySelector(".modal-close");
+	var form = popupmessage.querySelector(".message-form");
+	var login = popupmessage.querySelector("[name=fullname]");
+  	var password = popupmessage.querySelector("[name=email]");
+
+	write.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupmessage.classList.add("modal-show");
+	login.focus();
+  });
+
+	close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupmessage.classList.remove("modal-show");
+  });
+
+	form.addEventListener(".send-message", function (evt) {
+	evt.preventDefault();
+  });
+</script>
+		
 	</body>
 	</html>
