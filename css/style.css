@@ -2019,13 +2019,15 @@ a.pagination-current {
 	font-style: normal;
 }
 
-.footer-logo-contacts p {
+.footer-logo-contacts .footer-telephone {
 	margin: 0;
 	margin-left: 3px;
+	
+	color: #fff;
 }
 
 .footer-menu {
-	width: 548px;
+	width: 550px;
 }
 
 .footer-menu ul {
