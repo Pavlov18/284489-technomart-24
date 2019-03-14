@@ -828,7 +828,8 @@ a.cart::before {
 	flex-wrap: wrap;
 	width: 160px;
 
-	margin: auto 15px;
+    margin: 0 15px;
+    margin-top: 14px;
 	padding: 0;
 
 	list-style: none;
@@ -836,6 +837,7 @@ a.cart::before {
 
 .slider-indicators li {
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .slider-indicators input[type="radio"] {	
@@ -956,7 +958,7 @@ a.cart::before {
 span.price {
 	position: relative;
 
-	width: 122px;
+	width: 124px;
 	margin: 8px auto;
 	margin-bottom: 20px;
 	margin-left: 6px;
@@ -976,7 +978,7 @@ span.price {
 	content: "";
 
 	position: absolute;
-	right: -38px;
+	right: -36px;
 	top: 0;
 
 	width: 0;
