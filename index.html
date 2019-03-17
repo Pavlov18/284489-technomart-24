@@ -107,7 +107,27 @@
 								<p>Настоящие мужские игрушки</p>
 								<img src="img/index/slide-1.jpg" width="620" height="266" alt="Дрели">
 							</div>
-							<div class="slide active">
+							<div class="slide visually-hidden">
+								<h3>Перфораторы</h3>
+								<p>Настоящие мужские игрушки</p>
+								<img src="img/index/slide-1.jpg" width="620" height="266" alt="Дрели">
+							</div>
+							<div class="slide visually-hidden">
+								<h3>Перфораторы</h3>
+								<p>Настоящие мужские игрушки</p>
+								<img src="img/index/slide-1.jpg" width="620" height="266" alt="Дрели">
+							</div>
+							<div class="slide current">
+								<h3>Перфораторы</h3>
+								<p>Настоящие мужские игрушки</p>
+								<img src="img/index/slide-1.jpg" width="620" height="266" alt="Дрели">
+							</div>
+							<div class="slide visually-hidden">
+								<h3>Перфораторы</h3>
+								<p>Настоящие мужские игрушки</p>
+								<img src="img/index/slide-1.jpg" width="620" height="266" alt="Дрели">
+							</div>
+							<div class="slide visually-hidden">
 								<h3>Дрели</h3>
 								<p>Соседям на радость!</p>
 								<img src="img/index/slide-2.jpg" width="620" height="266" alt="Перфораторы">
@@ -119,16 +139,37 @@
 						</div>
 						<div class="catalog-indicators">
 							<a class="slider-catalog button" href="catalog.html">Открыть каталог</a>
-							<ul class="slider-indicators">
+							<ul class ="slider-indicators">
 								<li>
-									<input type="radio" class="slide-radio" id="slide-1" name="slider-button" value="1">
+									<input type="radio" class="slide-radio" id="slide-1" name="slide-radio" value="1">
 									<label for="slide-1">
 										<span class="visually-hidden">Первый слайд</span>
 									</label>
 								</li>
 								<li>
-									<input type="radio" class="slide-radio" id="slide-2" name="slider-button" value="2" checked>
+									<input type="radio" class="slide-radio" id="slide-2" name="slide-radio" value="2">
 									<label for="slide-2">
+										<span class="visually-hidden">Второй слайд</span>
+									</label>
+								</li>
+								<li>
+									<input type="radio" class="slide-radio" id="slide-3" name="slide-radio" value="3" >
+									<label for="slide-3">
+										<span class="visually-hidden">Второй слайд</span>
+									</label>
+								</li>								<li>
+									<input type="radio" class="slide-radio" id="slide-4" name="slide-radio" value="4" checked>
+									<label for="slide-4">
+										<span class="visually-hidden">Второй слайд</span>
+									</label>
+								</li>								<li>
+									<input type="radio" class="slide-radio" id="slide-5" name="slide-radio" value="5" >
+									<label for="slide-5">
+										<span class="visually-hidden">Второй слайд</span>
+									</label>
+								</li>								<li>
+									<input type="radio" class="slide-radio" id="slide-6" name="slide-radio" value="6" >
+									<label for="slide-6">
 										<span class="visually-hidden">Второй слайд</span>
 									</label>
 								</li>
@@ -261,12 +302,12 @@
 				<p class="services-description">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 				<div class="services-slider">
 					<figure class="service-list">
-						<a class="active" title="Доставка">Доставка</a>
+						<a class="current" title="Доставка">Доставка</a>
 						<a href="#" title="Гарантия">Гарантия</a>
 						<a href="#" title="Кредит">Кредит</a>
 					</figure>
 					<ul class="services-content">
-						<li class="services-delivery active">
+						<li class="services-delivery current">
 							<h3>Доставка</h3>
 							<p>Мы с удовольствием доставим ваш товар прямо
 								<span>к вашему подъезду совершенно бесплатно!</span> Ведь мы неплохо заработаем,
@@ -311,7 +352,7 @@
 					<a class="map-open" href="https://goo.gl/maps/TSDn2tFK6os" title="Открыть карту">
 						<img src="img/index/map.jpg" alt="Карта">
 					</a>
-					<a class="button write-me" href="#" title="Заблудились? Напишите нам!">Заблудились? Напишите нам!</a>
+					<a class="button button-write-me" href="#" title="Заблудились? Напишите нам!">Заблудились? Напишите нам!</a>
 				</section>
 			</div>
 		</main>
@@ -378,7 +419,7 @@
 		</footer>
 		<section class="modal modal-message">
 			<h2 class="visually-hidden">Форма отправки письма</h2>
-			<form action="#" method="get" name="message-form">
+			<form action="#" method="post" name="message-form">
 				<div class="modal-fields">
 					<p>
 						<label>Ваше имя:</label>
@@ -390,39 +431,27 @@
 					</p>
 					<p>
 						<label>Текст письма:</label>
-						<textarea class="modal-field" placeholder="В свободной форме" rows="5"></textarea>
+						<textarea class="modal-field" name="message" placeholder="В свободной форме" rows="5"></textarea>
 					</p>
 				</div>
 				<div class="modal-buttons">
-					<button class="send-message button" type="submit">Отправить</button>
-					<button class="modal-close" type="button">Закрыть</button>
+					<button type="submit" class="send-message button">Отправить</button>
+					<button class="modal-close modal-write-close" type="button">Закрыть</button>
 				</div>
 			</form>
 		</section>
+
+		<section class="modal modal-cart-add">
+			<h2>Товар добавлен в корзину!</h2>
+			<div class="modal-buttons">
+				<a class="place-order button" href="#" title="Оформить заказ">Оформить заказ</a>
+				<a class="back-shop button modal-add-close" href="#" title="Продолжить покупки">Продолжить покупки</a>
+				<button class="modal-close modal-add-close" type="button">Закрыть</button>
+			</div>
+		</section>
+
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-		<script>
-	var write = document.querySelector(".write-me");
-	var popupmessage = document.querySelector(".modal-message");
-	var close = popupmessage.querySelector(".modal-close");
-	var form = popupmessage.querySelector(".message-form");
-	var login = popupmessage.querySelector("[name=fullname]");
-  	var password = popupmessage.querySelector("[name=email]");
-
-	write.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popupmessage.classList.add("modal-show");
-	login.focus();
-  });
-
-	close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popupmessage.classList.remove("modal-show");
-  });
-
-	form.addEventListener(".send-message", function (evt) {
-	evt.preventDefault();
-  });
-</script>
+		<script src="js/script.js"></script>
 		
 	</body>
 	</html>

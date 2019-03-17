@@ -289,6 +289,7 @@ a.cart::before {
 
 .shop-block .contain {
 	background-color: #EE3643;
+	
 	color: #fff;
 }
 
@@ -299,6 +300,7 @@ a.cart::before {
 
 .shop-block.contain:active {
 	color: rgba(255, 255, 255, 0.5);
+
 	background-color: #BA2732;
 }
 
@@ -1274,7 +1276,7 @@ p.services-description {
 }
 
 .service-list a[href]:active, 
-.service-list .active {
+.service-list .current {
 	color: #32425C;
 
 	background-color: #fff;
@@ -1839,7 +1841,7 @@ fieldset.filter-power {
 	border: none;
 }
 
-.sort-type .active {
+.sort-type .current {
 	color: #EE3643;
 }
 
@@ -2202,6 +2204,46 @@ a.pagination-current {
 	padding-left: 38px;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
 	position: fixed;
 	z-index: 2;
@@ -2230,6 +2272,12 @@ a.pagination-current {
 
 .modal-show {
 	display: block;
+
+	animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-close {
