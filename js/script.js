@@ -91,121 +91,107 @@
 
 
 
-	var slider = document.querySelector(".slider");
-	var slides = slider.querySelectorAll(".slide");
-	var slideRadio = document.getElementsByName('slide-radio');
-	var btnBack = slider.querySelector(".slider-button-back");
-	var btnNext = slider.querySelector(".slider-button-next");
-	var sliderContent = slider.querySelector(".slider-content");
+			var slider = document.querySelector(".slider");
+			var slides = slider.querySelectorAll(".slide");
+			var slideRadio = document.getElementsByName('slide-radio');
+			var btnBack = slider.querySelector(".slider-button-back");
+			var btnNext = slider.querySelector(".slider-button-next");
+			var sliderContent = slider.querySelector(".slider-content");
 
-	btnBack.addEventListener("click", function (evt) {
+			btnBack.addEventListener("click", function (evt) {
+				var currentSlide = sliderContent.querySelector(".current");
+				var prevSlide = currentSlide.previousElementSibling;
+				var firstSlide = sliderContent.firstElementChild;
+				var finalSlide = sliderContent.lastElementChild;
+				currentSlide.classList.remove("current");
+				currentSlide.classList.add("visually-hidden");
+				if (currentSlide != firstSlide) {
+					prevSlide.classList.remove("visually-hidden");
+					prevSlide.classList.add("current");
+				}
+				else {
+					finalSlide.classList.remove("visually-hidden");
+					finalSlide.classList.add("current");
+				}
+			});
 
- 		var currentSlide = sliderContent.querySelector(".current");
-    	var prevSlide = currentSlide.previousElementSibling;
-    	var firstSlide = sliderContent.firstElementChild;
-    	var finalSlide = sliderContent.lastElementChild;
-		currentSlide.classList.remove("current");
-		currentSlide.classList.add("visually-hidden");
+			btnNext.addEventListener("click", function (evt) {
 
-		if (currentSlide != firstSlide) {
-			prevSlide.classList.remove("visually-hidden");
-			prevSlide.classList.add("current");
-		}
+				var currentSlide = sliderContent.querySelector(".current");
+				var nextSlide = currentSlide.nextElementSibling;
+				var firstSlide = sliderContent.firstElementChild;
+				var finalSlide = sliderContent.lastElementChild;
 
-		else {
-			finalSlide.classList.remove("visually-hidden");
-			finalSlide.classList.add("current");
-		}
-	});
-
-	btnNext.addEventListener("click", function (evt) {
-
- 		var currentSlide = sliderContent.querySelector(".current");
-    	var nextSlide = currentSlide.nextElementSibling;
-    	var firstSlide = sliderContent.firstElementChild;
-    	var finalSlide = sliderContent.lastElementChild;
-			currentSlide.classList.remove("current");
-			currentSlide.classList.add("visually-hidden");
-
-
-		if (currentSlide != finalSlide) {
-			nextSlide.classList.remove("visually-hidden");
-			nextSlide.classList.add("current");
-		}
-
-		else {
-			firstSlide.classList.remove("visually-hidden");
-			firstSlide.classList.add("current");
-		}
- 
- 
+				currentSlide.classList.remove("current");
+				currentSlide.classList.add("visually-hidden");
+				if (currentSlide != finalSlide) {
+					nextSlide.classList.remove("visually-hidden");
+					nextSlide.classList.add("current");
+				}
+				else {
+					firstSlide.classList.remove("visually-hidden");
+					firstSlide.classList.add("current");
+				}
+			});
 
 
 
 
+			btnsNetxPrev = slider.querySelector(".buttons-next-prev").querySelectorAll("button");
+			for (i = 0; i < btnsNetxPrev.length; i++) {
+				btnsNetxPrev[i].addEventListener("click", function (evt) {
+				evt.preventDefault();
 
-
-
- 
- for (var i=0; i!= slides.length; ++i) {
-	if (slides[i].classList.contains("current")) {
- 		console.log(i+1);
-		for (var i = 0; i < slideRadio.length; i++) {       
-    		if (slideRadio[i].checked) {
-        		slideRadio[i].checked = false;
+				for (var i=0; i!= slides.length; ++i) {
+					if (slides[i].classList.contains("current")) {
+						var nNum = i+1;
+						console.log(nNum + " - Определили номер сайда")
+						for (var i = 0; i < slideRadio.length; i++) {       
+							if (slideRadio[i].checked) {
+								slideRadio[i].checked = false;
+							}
+						}
+						var parent = slider.querySelector(".slider-indicators");
+						var elems = parent.querySelectorAll("li");
+						for (var i = 0; i < elems.length; i++) {
+							var NumLiButton = i+1;
+							if (NumLiButton === nNum) {
+									elems[NumLiButton - 1].querySelector("input").checked = true;
+							}
+						}
+						return;		
+					};
+				}
+				});
 			}
-		 nnum = slider.querySelector(".slide-radio:nth-child(" + i+1 + ")");
-				slideRadio[i].checked = true; 
 
-		}
-   		return;
-	};
- 
- }
- 
- 
+			for (var i=0 ; i<slideRadio.length; i++) {
+				slideRadio[i].addEventListener("click", function(){
 
-
-
-	});
-
-
-
-
-
-
-
-
-
-
- 
-for (var i=0 ; i<slideRadio.length; i++) {
-  slideRadio[i].addEventListener("click", function(){
-          
-  for (var i = 0; i < slideRadio.length; i++) {       
-    if (slideRadio[i].checked) {
-        numRadio = slideRadio[i].value;
+					for (var i = 0; i < slideRadio.length; i++) {       
+						if (slideRadio[i].checked) {
+							numRadio = slideRadio[i].value;
 
 		for (var i = 0; i < slides.length; i++) {           // visually-hidden всех слайдов и удаление .current
-    		slides[i].classList.add("visually-hidden");  
-    		slides[i].classList.remove("current");
+			slides[i].classList.add("visually-hidden");  
+			slides[i].classList.remove("current");
 		}
 
 		var numSlide = slider.querySelector(".slide:nth-child(" + numRadio + ")");
-  		numSlide.classList.remove("visually-hidden");
-  		numSlide.classList.add("current");
-    }
-  }
-          
-  });
+		numSlide.classList.remove("visually-hidden");
+		numSlide.classList.add("current");
+	}
 }
 
+});
+			}
 
 
- 
 
 
- 
+
+
+
 
 
 
