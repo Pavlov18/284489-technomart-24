@@ -803,6 +803,17 @@ a.cart::before {
 	border-top-width: 3px;
 
 }
+
+.slider	.slider-button-back:hover,
+.slider	.slider-button-back:focus,
+.slider	.slider-button-next:hover,
+.slider	.slider-button-next:focus {
+		border-left-color: #EE3643;
+		border-top-color: #EE3643;
+		outline: none;
+		cursor: pointer;
+}
+
 .slider	.slider-button-back {
 	transform: rotate(-45deg);	
 	margin-left: 6px;
@@ -855,6 +866,11 @@ a.cart::before {
 	height: 10px;
 
 	background: url("../img/sprite.png") 0px 0px no-repeat;
+}
+
+.slider-indicators label:hover,
+.slider-indicators label:focus {
+	cursor: pointer;
 }
 
 .slide-radio:checked + label::after {
