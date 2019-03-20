@@ -868,11 +868,14 @@ a.cart::before {
 	background: url("../img/sprite.png") 0px 0px no-repeat;
 }
 
+<<<<<<< HEAD
 .slider-indicators label:hover,
 .slider-indicators label:focus {
 	cursor: pointer;
 }
 
+=======
+>>>>>>> parent of 826a98a... Слайдер - изменение верстки и javascript
 .slide-radio:checked + label::after {
 	content: "";
 
