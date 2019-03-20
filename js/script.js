@@ -88,42 +88,60 @@
 
 			var slider = document.querySelector(".slider");
 			var slides = slider.querySelectorAll(".slide");
-			var slideRadio = document.getElementsByName('slide-radio');
+			var slideRadio = document.getElementsByName("slide-radio");
 			var btnBack = slider.querySelector(".slider-button-back");
 			var btnNext = slider.querySelector(".slider-button-next");
 			var sliderContent = slider.querySelector(".slider-content");
 			var firstSlide = sliderContent.firstElementChild;
 			var finalSlide = sliderContent.lastElementChild;
 
-			btnBack.addEventListener("click", function (evt) {
-				var currentSlide = sliderContent.querySelector(".current");
-				var prevSlide = currentSlide.previousElementSibling;
-				currentSlide.classList.remove("current");
-				currentSlide.classList.add("visually-hidden");
-				if (currentSlide != firstSlide) {
-					prevSlide.classList.remove("visually-hidden");
-					prevSlide.classList.add("current");
-				}
-				else {
-					finalSlide.classList.remove("visually-hidden");
-					finalSlide.classList.add("current");
-				}
-			});
-
 			btnNext.addEventListener("click", function (evt) {
-				var currentSlide = sliderContent.querySelector(".current");
-				var nextSlide = currentSlide.nextElementSibling;
-				currentSlide.classList.remove("current");
-				currentSlide.classList.add("visually-hidden");
-				if (currentSlide != finalSlide) {
-					nextSlide.classList.remove("visually-hidden");
-					nextSlide.classList.add("current");
+				for (var i = 0; i < slideRadio.length; i++) {
+					if (slideRadio[i].checked) {
+						var currentCheck = slideRadio[i];
+						var nextRadio = slideRadio[i+1];
+					}
+					if (i === slideRadio.length - 1) {
+						var finalRadio = slideRadio[i];
+					}
+					if (i === 0) {
+						var firstRadio = slideRadio[i];
+					}
+				}
+				currentCheck.checked=false;	
+				if (currentCheck != finalRadio) {
+					nextRadio.checked=true;
 				}
 				else {
-					firstSlide.classList.remove("visually-hidden");
-					firstSlide.classList.add("current");
+					firstRadio.checked=true;
 				}
-			});
+				});
+
+			btnBack.addEventListener("click", function (evt) {
+				for (var i = 0; i < slideRadio.length; i++) {
+					if (slideRadio[i].checked) {
+						var currentCheck = slideRadio[i];
+						var prevRadio = slideRadio[i-1];
+					}
+					if (i === slideRadio.length - 1) {
+						var finalRadio = slideRadio[i];
+					}
+					if (i === 0) {
+						var firstRadio = slideRadio[i];
+					}
+				}
+				currentCheck.checked=false;	
+				if (currentCheck != firstRadio) {
+					prevRadio.checked=true;
+				}
+				else {
+					finalRadio.checked=true;
+				}
+				});			
+
+
+
+/* 			 Переключение радиокнопками с помощью javascript. Начало.
 
 			btnsNetxPrev = slider.querySelector(".buttons-next-prev").querySelectorAll("button");
 			for (var i = 0; i < btnsNetxPrev.length; i++) {
@@ -168,3 +186,5 @@
 					}
 				});
 			}
+
+		Переключение радиокнопками с помощью javascript. Конец.	*/ 
