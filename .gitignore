@@ -9,3 +9,5 @@
 node_modules/
 npm-debug.*
 Thumbs.db
+index.html
+js/script.js
