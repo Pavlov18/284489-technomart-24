@@ -1,3 +1,4 @@
+//			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
 
 			var buttonwrite = document.querySelector(".button-write-me");
 			var popupform = document.querySelector(".modal-message");
@@ -100,6 +101,7 @@
 					if (slideRadio[i].checked) {
 						var currentCheck = slideRadio[i];
 						var nextRadio = slideRadio[i+1];
+						var prevRadio = slideRadio[i-1];
 					}
 					if (i === slideRadio.length - 1) {
 						var finalRadio = slideRadio[i];
@@ -121,7 +123,7 @@
 				for (var i = 0; i < slideRadio.length; i++) {
 					if (slideRadio[i].checked) {
 						var currentCheck = slideRadio[i];
-						var prevRadio = slideRadio[i-1];
+
 					}
 					if (i === slideRadio.length - 1) {
 						var finalRadio = slideRadio[i];
