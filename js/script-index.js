@@ -6,7 +6,7 @@ var closeWrite = document.querySelector(".modal-write-close");
 
 var buttonsBuy = document.querySelectorAll(".button-buy");
 var popupcart = document.querySelector(".modal-cart-add");
-var closeAddCart = popupcart.querySelectorAll(".modal-add-close");
+var closePopup = document.querySelectorAll(".modal-add-close");
 
 var form = popupform.querySelector("[name=message-form]");
 var fullname = popupform.querySelector("[name=fullname]");
@@ -62,7 +62,7 @@ buttonwrite.addEventListener("click", function (evt) {
 	}
 });
 
-closeWrite.addEventListener("click", function (evt) {
+	closeWrite.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popupform.classList.remove("modal-show");
 	popupform.classList.remove("modal-error");
@@ -76,11 +76,12 @@ for (var i = 0; i < buttonsBuy.length; i++) {
 	});
 }
 
-for (var i = 0; i < closeAddCart.length; i++) {
-	var buttonClose = closeAddCart[i];
+for (var i = 0; i < closePopup.length; i++) {
+	var buttonClose = closePopup[i];
 	buttonClose.addEventListener("click", function (evt) {
 		evt.preventDefault();
 		popupcart.classList.remove("modal-show");
+		mapPopup.classList.remove("modal-show");
 	});
 }
 
