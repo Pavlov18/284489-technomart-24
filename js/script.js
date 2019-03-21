@@ -1,19 +1,34 @@
 
 			var buttonwrite = document.querySelector(".button-write-me");
 			var popupform = document.querySelector(".modal-message");
-			var closeWrite = popupform.querySelector(".modal-write-close");
+		//	var closeWrite = document.querySelector(".modal-write-close");
 
 			var buttonsBuy = document.querySelectorAll(".button-buy");
 			var popupcart = document.querySelector(".modal-cart-add");
 			var closeAddCart = popupcart.querySelectorAll(".modal-add-close");
-
+/*
 			var form = popupform.querySelector("[name=message-form]");
 			var fullname = popupform.querySelector("[name=fullname]");
 			var email = popupform.querySelector("[name=email]");
-			var message = popupform.querySelector("[name=message]")
+			var message = popupform.querySelector("[name=message]") */
 			var isStorageSupport = true;
 			var storageName = "";
 			var storageEmail = "";
+
+			var userBlock = document.querySelector(".user-navigation");
+			var login = userBlock.querySelector(".login");
+			var logout = userBlock.querySelector(".logout");
+
+			login.addEventListener("click", function (evt) {
+				evt.preventDefault();
+				userBlock.classList.add("auth");
+			});
+
+			logout.addEventListener("click", function (evt) {
+				evt.preventDefault();
+				userBlock.classList.remove("auth");
+			});
+
 
 			try {
 				storageName = localStorage.getItem("fullname");
@@ -21,7 +36,7 @@
 			} catch (err) {
 				isStorageSupport = false;
 			}
-
+/*
 			buttonwrite.addEventListener("click", function (evt) {
 				evt.preventDefault();
 				popupform.classList.add("modal-show");
@@ -44,7 +59,7 @@
 				popupform.classList.remove("modal-show");
 				popupform.classList.remove("modal-error");
 			});
-
+*/
 			for (var i = 0; i < buttonsBuy.length; i++) {
 				var buttonBuy = buttonsBuy[i];
 				buttonBuy.addEventListener('click', function (evt) {
@@ -61,7 +76,7 @@
 				});
 			}
 
-			form.addEventListener("submit", function (evt) {
+	/*		form.addEventListener("submit", function (evt) {
 				evt.preventDefault();
 				if (!fullname.value || !email.value || !message.value) {
 					evt.preventDefault();
@@ -75,7 +90,7 @@
 					}
 				}
 			});
-			
+			*/
 			window.addEventListener("keydown", function (evt) {
 				if (evt.keyCode === 27) {
 					evt.preventDefault();
@@ -88,42 +103,60 @@
 
 			var slider = document.querySelector(".slider");
 			var slides = slider.querySelectorAll(".slide");
-			var slideRadio = document.getElementsByName('slide-radio');
+			var slideRadio = document.getElementsByName("slide-radio");
 			var btnBack = slider.querySelector(".slider-button-back");
 			var btnNext = slider.querySelector(".slider-button-next");
 			var sliderContent = slider.querySelector(".slider-content");
 			var firstSlide = sliderContent.firstElementChild;
 			var finalSlide = sliderContent.lastElementChild;
 
-			btnBack.addEventListener("click", function (evt) {
-				var currentSlide = sliderContent.querySelector(".current");
-				var prevSlide = currentSlide.previousElementSibling;
-				currentSlide.classList.remove("current");
-				currentSlide.classList.add("visually-hidden");
-				if (currentSlide != firstSlide) {
-					prevSlide.classList.remove("visually-hidden");
-					prevSlide.classList.add("current");
-				}
-				else {
-					finalSlide.classList.remove("visually-hidden");
-					finalSlide.classList.add("current");
-				}
-			});
-
 			btnNext.addEventListener("click", function (evt) {
-				var currentSlide = sliderContent.querySelector(".current");
-				var nextSlide = currentSlide.nextElementSibling;
-				currentSlide.classList.remove("current");
-				currentSlide.classList.add("visually-hidden");
-				if (currentSlide != finalSlide) {
-					nextSlide.classList.remove("visually-hidden");
-					nextSlide.classList.add("current");
+				for (var i = 0; i < slideRadio.length; i++) {
+					if (slideRadio[i].checked) {
+						var currentCheck = slideRadio[i];
+						var nextRadio = slideRadio[i+1];
+					}
+					if (i === slideRadio.length - 1) {
+						var finalRadio = slideRadio[i];
+					}
+					if (i === 0) {
+						var firstRadio = slideRadio[i];
+					}
+				}
+				currentCheck.checked=false;	
+				if (currentCheck != finalRadio) {
+					nextRadio.checked=true;
 				}
 				else {
-					firstSlide.classList.remove("visually-hidden");
-					firstSlide.classList.add("current");
+					firstRadio.checked=true;
 				}
-			});
+				});
+
+			btnBack.addEventListener("click", function (evt) {
+				for (var i = 0; i < slideRadio.length; i++) {
+					if (slideRadio[i].checked) {
+						var currentCheck = slideRadio[i];
+						var prevRadio = slideRadio[i-1];
+					}
+					if (i === slideRadio.length - 1) {
+						var finalRadio = slideRadio[i];
+					}
+					if (i === 0) {
+						var firstRadio = slideRadio[i];
+					}
+				}
+				currentCheck.checked=false;	
+				if (currentCheck != firstRadio) {
+					prevRadio.checked=true;
+				}
+				else {
+					finalRadio.checked=true;
+				}
+				});			
+
+
+
+/* 			 Переключение радиокнопками с помощью javascript. Начало.
 
 			btnsNetxPrev = slider.querySelector(".buttons-next-prev").querySelectorAll("button");
 			for (var i = 0; i < btnsNetxPrev.length; i++) {
@@ -168,3 +201,5 @@
 					}
 				});
 			}
+
+		Переключение радиокнопками с помощью javascript. Конец.	*/ 
