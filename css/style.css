@@ -1274,7 +1274,7 @@ p.services-description {
 	background-repeat: no-repeat;
 }
 
-.service-list a {
+.service-list label {
 	display: block;
 	width: 240px;
 	padding-top: 14px;
@@ -1289,17 +1289,47 @@ p.services-description {
 	background-color: #32425C;
 }
 
-.service-list a[href]:hover,
-.service-list a[href]:focus {
+.service-button:nth-of-type(1):not(:checked):hover ~ .service-list label:nth-child(1),
+.service-button:nth-of-type(2):not(:checked):hover ~ .service-list label:nth-child(2),
+.service-button:nth-of-type(3):not(:checked):hover ~ .service-list label:nth-child(3),
+.service-button:nth-of-type(1):not(:checked):focus ~ .service-list label:nth-child(1),
+.service-button:nth-of-type(2):not(:checked):focus ~ .service-list label:nth-child(2),
+.service-button:nth-of-type(3):not(:checked):focus ~ .service-list label:nth-child(3)  {
 	background-color: #293449;
+	cursor: pointer;
 }
 
-.service-list a[href]:active, 
-.service-list .current {
-	color: #32425C;
 
+.service-button:nth-of-type(1):not(:checked):active ~ .service-list label:nth-child(1),
+.service-button:nth-of-type(2):not(:checked):active ~ .service-list label:nth-child(2),
+.service-button:nth-of-type(3):not(:checked):active ~ .service-list label:nth-child(3) {
+	color: #32425C;
 	background-color: #fff;
 }
+
+.service-button:nth-of-type(1):checked ~ .service-list label:nth-child(1),
+.service-button:nth-of-type(2):checked ~ .service-list label:nth-child(2),
+.service-button:nth-of-type(3):checked ~ .service-list label:nth-child(3) {
+	color: #32425C;
+	background-color: #fff;
+}
+
+.services-content li {
+	display: none;
+}
+
+.service-button:nth-of-type(1):checked ~ .services-content li:nth-child(1) {
+  display: block;
+}
+
+.service-button:nth-of-type(2):checked ~ .services-content li:nth-child(2) {
+  display: block;
+}
+
+.service-button:nth-of-type(3):checked ~ .services-content li:nth-child(3) {
+  display: block;
+}
+
 
 .services-content {
 	position: relative;

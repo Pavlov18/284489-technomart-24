@@ -96,7 +96,7 @@
 			var firstSlide = sliderContent.firstElementChild;
 			var finalSlide = sliderContent.lastElementChild;
 
-<<<<<<< HEAD
+
 			btnNext.addEventListener("click", function (evt) {
 				for (var i = 0; i < slideRadio.length; i++) {
 					if (slideRadio[i].checked) {
@@ -114,24 +114,11 @@
 				currentCheck.checked=false;	
 				if (currentCheck != finalRadio) {
 					nextRadio.checked=true;
-=======
-			btnBack.addEventListener("click", function (evt) {
-				var currentSlide = sliderContent.querySelector(".current");
-				var prevSlide = currentSlide.previousElementSibling;
-				currentSlide.classList.remove("current");
-				currentSlide.classList.add("visually-hidden");
-				if (currentSlide != firstSlide) {
-					prevSlide.classList.remove("visually-hidden");
-					prevSlide.classList.add("current");
->>>>>>> e6ea3e8b748c4adb945fab2026bae4cea25eba1f
-				}
-				else {
-					finalSlide.classList.remove("visually-hidden");
-					finalSlide.classList.add("current");
-				}
-			});
 
-<<<<<<< HEAD
+}
+
+});
+
 			btnBack.addEventListener("click", function (evt) {
 				for (var i = 0; i < slideRadio.length; i++) {
 					if (slideRadio[i].checked) {
@@ -148,63 +135,6 @@
 				currentCheck.checked=false;	
 				if (currentCheck != firstRadio) {
 					prevRadio.checked=true;
-=======
-			btnNext.addEventListener("click", function (evt) {
-				var currentSlide = sliderContent.querySelector(".current");
-				var nextSlide = currentSlide.nextElementSibling;
-				currentSlide.classList.remove("current");
-				currentSlide.classList.add("visually-hidden");
-				if (currentSlide != finalSlide) {
-					nextSlide.classList.remove("visually-hidden");
-					nextSlide.classList.add("current");
->>>>>>> e6ea3e8b748c4adb945fab2026bae4cea25eba1f
-				}
-				else {
-					firstSlide.classList.remove("visually-hidden");
-					firstSlide.classList.add("current");
-				}
-			});
+}
 
-			btnsNetxPrev = slider.querySelector(".buttons-next-prev").querySelectorAll("button");
-			for (var i = 0; i < btnsNetxPrev.length; i++) {
-				btnsNetxPrev[i].addEventListener("click", function (evt) {
-					evt.preventDefault();
-					for (var i=0; i!= slides.length; ++i) {
-
-						if (slides[i].classList.contains("current")) {
-							var nNum = i+1;
-							for (var i = 0; i < slideRadio.length; i++) {       
-								if (slideRadio[i].checked) {
-									slideRadio[i].checked = false;
-								}
-							}
-							var parent = slider.querySelector(".slider-indicators");
-							var elems = parent.querySelectorAll("li");
-							for (var i = 0; i < elems.length; i++) {
-								var NumLiButton = i+1;
-								if (NumLiButton === nNum) {
-									elems[NumLiButton - 1].querySelector("input").checked = true;
-								}
-							}
-							return;		
-						};
-					}
-				});
-			}
-
-			for (var i=0 ; i<slideRadio.length; i++) {
-				slideRadio[i].addEventListener("click", function(){
-					for (var i = 0; i < slideRadio.length; i++) {       
-						if (slideRadio[i].checked) {
-							numRadio = slideRadio[i].value;
-							for (var i = 0; i < slides.length; i++) {
-								slides[i].classList.add("visually-hidden");  
-								slides[i].classList.remove("current");
-							}
-							var numSlide = slider.querySelector(".slide:nth-child(" + numRadio + ")");
-							numSlide.classList.remove("visually-hidden");
-							numSlide.classList.add("current");
-						}
-					}
-				});
-			}
+});
