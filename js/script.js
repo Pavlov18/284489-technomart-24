@@ -1,16 +1,17 @@
+			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
 
 			var buttonwrite = document.querySelector(".button-write-me");
 			var popupform = document.querySelector(".modal-message");
-		//	var closeWrite = document.querySelector(".modal-write-close");
+			var closeWrite = document.querySelector(".modal-write-close");
 
 			var buttonsBuy = document.querySelectorAll(".button-buy");
 			var popupcart = document.querySelector(".modal-cart-add");
 			var closeAddCart = popupcart.querySelectorAll(".modal-add-close");
-/*
+
 			var form = popupform.querySelector("[name=message-form]");
 			var fullname = popupform.querySelector("[name=fullname]");
 			var email = popupform.querySelector("[name=email]");
-			var message = popupform.querySelector("[name=message]") */
+			var message = popupform.querySelector("[name=message]") 
 			var isStorageSupport = true;
 			var storageName = "";
 			var storageEmail = "";
@@ -36,7 +37,7 @@
 			} catch (err) {
 				isStorageSupport = false;
 			}
-/*
+
 			buttonwrite.addEventListener("click", function (evt) {
 				evt.preventDefault();
 				popupform.classList.add("modal-show");
@@ -59,7 +60,7 @@
 				popupform.classList.remove("modal-show");
 				popupform.classList.remove("modal-error");
 			});
-*/
+
 			for (var i = 0; i < buttonsBuy.length; i++) {
 				var buttonBuy = buttonsBuy[i];
 				buttonBuy.addEventListener('click', function (evt) {
@@ -76,7 +77,7 @@
 				});
 			}
 
-	/*		form.addEventListener("submit", function (evt) {
+			form.addEventListener("submit", function (evt) {
 				evt.preventDefault();
 				if (!fullname.value || !email.value || !message.value) {
 					evt.preventDefault();
@@ -90,7 +91,7 @@
 					}
 				}
 			});
-			*/
+			
 			window.addEventListener("keydown", function (evt) {
 				if (evt.keyCode === 27) {
 					evt.preventDefault();
@@ -109,6 +110,7 @@
 			var sliderContent = slider.querySelector(".slider-content");
 			var firstSlide = sliderContent.firstElementChild;
 			var finalSlide = sliderContent.lastElementChild;
+
 
 			btnNext.addEventListener("click", function (evt) {
 				for (var i = 0; i < slideRadio.length; i++) {
@@ -152,54 +154,4 @@
 				else {
 					finalRadio.checked=true;
 				}
-				});			
-
-
-
-/* 			 Переключение радиокнопками с помощью javascript. Начало.
-
-			btnsNetxPrev = slider.querySelector(".buttons-next-prev").querySelectorAll("button");
-			for (var i = 0; i < btnsNetxPrev.length; i++) {
-				btnsNetxPrev[i].addEventListener("click", function (evt) {
-					evt.preventDefault();
-					for (var i=0; i!= slides.length; ++i) {
-
-						if (slides[i].classList.contains("current")) {
-							var nNum = i+1;
-							for (var i = 0; i < slideRadio.length; i++) {       
-								if (slideRadio[i].checked) {
-									slideRadio[i].checked = false;
-								}
-							}
-							var parent = slider.querySelector(".slider-indicators");
-							var elems = parent.querySelectorAll("li");
-							for (var i = 0; i < elems.length; i++) {
-								var NumLiButton = i+1;
-								if (NumLiButton === nNum) {
-									elems[NumLiButton - 1].querySelector("input").checked = true;
-								}
-							}
-							return;		
-						};
-					}
-				});
-			}
-
-			for (var i=0 ; i<slideRadio.length; i++) {
-				slideRadio[i].addEventListener("click", function(){
-					for (var i = 0; i < slideRadio.length; i++) {       
-						if (slideRadio[i].checked) {
-							numRadio = slideRadio[i].value;
-							for (var i = 0; i < slides.length; i++) {
-								slides[i].classList.add("visually-hidden");  
-								slides[i].classList.remove("current");
-							}
-							var numSlide = slider.querySelector(".slide:nth-child(" + numRadio + ")");
-							numSlide.classList.remove("visually-hidden");
-							numSlide.classList.add("current");
-						}
-					}
-				});
-			}
-
-		Переключение радиокнопками с помощью javascript. Конец.	*/ 
+			});	

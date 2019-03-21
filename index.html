@@ -252,13 +252,16 @@
 			<h2>Сервисы</h2>
 			<p class="services-description">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 			<div class="services-slider">
+				<input class="service-button visually-hidden" type="radio" name="service-buttons" id="service-slide-1" checked>
+				<input class="service-button visually-hidden" type="radio" name="service-buttons" id="service-slide-2">
+				<input class="service-button visually-hidden" type="radio" name="service-buttons" id="service-slide-3">
 				<figure class="service-list">
-					<a class="current" title="Доставка">Доставка</a>
-					<a href="#" title="Гарантия">Гарантия</a>
-					<a href="#" title="Кредит">Кредит</a>
+					<label for="service-slide-1">Доставка</label>
+					<label for="service-slide-2">Гарантия</label>
+					<label for="service-slide-3">Кредит</label>
 				</figure>
 				<ul class="services-content">
-					<li class="services-delivery current">
+					<li class="services-delivery">
 						<h3>Доставка</h3>
 						<p>Мы с удовольствием доставим ваш товар прямо
 							<span>к вашему подъезду совершенно бесплатно!</span> Ведь мы неплохо заработаем,
@@ -266,14 +269,14 @@
 						</p>
 						<img src="img/index/services-delivery.png" alt="Доставка" width="468" height="261">
 					</li>
-					<li class="services-garantee visually-hidden">
+					<li class="services-garantee">
 						<h3>Гарантия</h3>
-						<p>Если купленный у нас товар поломается или заискрит,  а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.  
+						<p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
 							<span>Дом уж восстановите как-нибудь сами.</span>
 						</p>
 						<img src="img/index/services-garantee.png" alt="Гарантия" width="389" height="283">
 					</li>
-					<li class="services-credit visually-hidden ">
+					<li class="services-credit">
 						<h3>Кредит</h3>
 						<p>Залезть в долговую яму стало проще!
 							<span>Кредитные консультанты придут вам на помощь.</span>
@@ -391,7 +394,6 @@
 		</div>
 	</form>
 </section>
-
 <section class="modal modal-cart-add">
 	<h2>Товар добавлен в корзину!</h2>
 	<div class="modal-buttons">
@@ -400,9 +402,6 @@
 		<button class="modal-close modal-add-close" type="button">Закрыть</button>
 	</div>
 </section>
-
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <script src="js/script.js"></script>
-
 </body>
 </html>
