@@ -561,7 +561,8 @@ a.logout {
 	width: 6px;
 	height: 7px;
 
-	background-image: url("../img/sprite.png") -9px -9px no-repeat;
+	background-color: #324561;
+	background: url("../img/sprite.png") -9px -9px no-repeat;
 }
 
 .main-navigation {
@@ -921,8 +922,8 @@ a.logout {
 	height: 10px;
 
 	font-size: 0;
-
-	background-image: url("../img/sprite.png") 0px 0px no-repeat;
+	background-color: #fff;
+	background: url("../img/sprite.png") 0px 0px no-repeat;
 }
 
 .slider-indicators label:hover,
@@ -944,7 +945,8 @@ a.logout {
 	width: 6px;
 	height: 6px;
 
-	background-image: url("../img/sprite.png") -10px -2px no-repeat;
+	background-color: #ff0e3a;
+	background: url("../img/sprite.png") -10px -2px no-repeat;
 }
 
 .slide-radio:nth-of-type(1):checked ~ .catalog-indicators label:nth-child(1)::after,

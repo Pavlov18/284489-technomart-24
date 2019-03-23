@@ -1,5 +1,3 @@
-			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
-
 			var buttonsBuy = document.querySelectorAll(".button-buy");
 			var popupcart = document.querySelector(".modal-cart-add");
 			var closeAddCart = popupcart.querySelectorAll(".modal-add-close");
