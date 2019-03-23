@@ -74,8 +74,7 @@ input[type="radio"].visually-hidden {
 
 	width: 60px;
 	height: 60px;
-
-	background-image: url("../img/new-flag.png") no-repeat 0 0;
+	background: url("../img/sprite.png") 0 -15px no-repeat;
 }
 
 .product-item.new-flag::after {
@@ -347,7 +346,7 @@ a.cart::before {
 .header-description {
 	display: inline-block;
 
-	width: 310px;
+	width: 320px;
 	margin: 0;
 	padding: 0 50px;
 	padding-left: 52px;
@@ -370,7 +369,7 @@ a.cart::before {
 	display: inline-block;
 	width: 270px;
 	padding: 9px;
-	padding-left: 76px;
+	padding-left: 71px;
 	margin-bottom: 4px;
 
 	color: #ee3643;
@@ -387,8 +386,8 @@ a.cart::before {
 	content: "";
 
 	position: absolute;
-	left: 15px;
-	top: 9px;
+	left: 12px;
+	top: 11px;
 
 	width: 19px;
 	height: 19px;
@@ -397,7 +396,7 @@ a.cart::before {
 }
 
 .header-contacts address {
-	padding-left: 14px;
+	padding-left: 9px;
 
 	font-style: normal;
 	color: #32425c;
@@ -461,12 +460,12 @@ a.cart::before {
 }
 
 .login a {
-	padding-left: 14px;
+	padding-left: 12px;
+	padding-right: 26px;
 }
 
-.login svg,
-.logined svg {
-	margin-right: 13px;
+.login svg {
+	margin-right: 8px;
 }
 
 .user-navigation a:hover svg path,
@@ -497,14 +496,17 @@ a.cart::before {
 	display: flex;
 }
 
-.user a {
+.logined svg {
+	margin-right: 13px;
+}
+
+a.logined {
 	padding: 11px 0;
 	padding-left: 13px;
-	padding-right: 10px;
 }
 
 a.logout {
-	padding: 12px 10px;
+	padding: 11px 10px;
 
 	height: 45px;
 
@@ -559,9 +561,8 @@ a.logout {
 	top: 5px;
 
 	width: 6px;
-	height: 7px;
+	height: 6px;
 
-	background-color: #324561;
 	background: url("../img/sprite.png") -9px -9px no-repeat;
 }
 
@@ -922,8 +923,8 @@ a.logout {
 	height: 10px;
 
 	font-size: 0;
-	background-color: #fff;
-	background: url("../img/sprite.png") 0px 0px no-repeat;
+
+	background: url("../img/sprite.png") 0 0 no-repeat;
 }
 
 .slider-indicators label:hover,
@@ -945,7 +946,6 @@ a.logout {
 	width: 6px;
 	height: 6px;
 
-	background-color: #ff0e3a;
 	background: url("../img/sprite.png") -10px -2px no-repeat;
 }
 
@@ -1082,6 +1082,8 @@ span.price {
 
 	display: none;
 	padding: 42px;
+    padding-left: 40px;
+    padding-top: 43px;
 
 	font-family: 'Cuprum', arial, sans-serif;
 	text-align: center;
@@ -1100,6 +1102,8 @@ span.price {
 
 .button-buy {
 	position: relative;
+
+	margin-bottom: 8px;
 
 	background-color: #63A63E;
 	border-bottom-right-radius: 0;
@@ -1133,9 +1137,8 @@ span.price {
 }
 
 .button-favorite {
-	margin-top: 10px;
-	padding: 6px;
-	padding-left: 32px;
+	padding: 7px;
+	padding-left: 33px;
 
 	font-size: 14px;
 	color: #32425C;
@@ -1489,7 +1492,7 @@ p.services-description {
 	margin: 0;
 	margin-top: 24px;
 
-	letter-spacing: 0px;
+	letter-spacing: 0;
 }
 
 .about-company ul {
@@ -2587,7 +2590,7 @@ a.pagination-current {
 
 	position: absolute;
 	top: 9px;
-	right: 0px;
+	right: 0;
 
 	width: 21px;
 	height: 3px;
