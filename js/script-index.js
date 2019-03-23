@@ -120,6 +120,7 @@ var firstSlide = sliderContent.firstElementChild;
 var finalSlide = sliderContent.lastElementChild;
 
 btnNext.addEventListener("click", function (evt) {
+	evt.preventDefault();
 	for (var i = 0; i < slideRadio.length; i++) {
 		if (slideRadio[i].checked) {
 			var currentCheck = slideRadio[i];
@@ -142,6 +143,7 @@ btnNext.addEventListener("click", function (evt) {
 	});
 
 btnBack.addEventListener("click", function (evt) {
+	evt.preventDefault();
 	for (var i = 0; i < slideRadio.length; i++) {
 		if (slideRadio[i].checked) {
 			var currentCheck = slideRadio[i];
