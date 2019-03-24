@@ -1100,7 +1100,7 @@ span.price {
 	text-align: left;
 }
 
-.button-buy {
+.pruduct-buttons .button-buy {
 	position: relative;
 
 	margin-bottom: 8px;
@@ -1111,11 +1111,11 @@ span.price {
 	border-bottom: 3px solid #367315;
 }
 
-.button-buy:hover {
+.pruduct-buttons .button-buy:hover {
 	background-color: #5FBB2D;
 }
 
-.button-buy:active {
+.pruduct-buttons .button-buy:active {
 	background-color: #518534;
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
@@ -1136,7 +1136,7 @@ span.price {
 	opacity: 0.3;
 }
 
-.button-favorite {
+.pruduct-buttons .button-favorite {
 	padding: 7px;
 	padding-left: 33px;
 
@@ -1148,12 +1148,12 @@ span.price {
 	border: solid 3px #63A63E;
 }
 
-.button-favorite:hover,
-.button-favorite:active {
+.pruduct-buttons .button-favorite:hover,
+.pruduct-buttons .button-favorite:active {
 	border-color: #32425C;
 }
 
-.button-favorite:active {
+.pruduct-buttons .button-favorite:active {
 	opacity: 0.3;
 }
 
