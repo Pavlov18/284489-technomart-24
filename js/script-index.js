@@ -1,3 +1,5 @@
+document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+
 var buttonwrite = document.querySelector(".button-write-me");
 var popupform = document.querySelector(".modal-message");
 var closeWrite = document.querySelector(".modal-write-close");
@@ -117,20 +119,25 @@ var sliderContent = slider.querySelector(".slider-content");
 var firstSlide = sliderContent.firstElementChild;
 var finalSlide = sliderContent.lastElementChild;
 
-btnNext.addEventListener("click", function (evt) {
-	evt.preventDefault();
+function slideButtons() {
 	for (var i = 0; i < slideRadio.length; i++) {
 		if (slideRadio[i].checked) {
-			var currentCheck = slideRadio[i];
-			var nextRadio = slideRadio[i+1];
+			currentCheck = slideRadio[i];
+			nextRadio = slideRadio[i+1];
+			prevRadio = slideRadio[i-1];
 		}
 		if (i === slideRadio.length - 1) {
-			var finalRadio = slideRadio[i];
+			 finalRadio = slideRadio[i];
 		}
 		if (i === 0) {
-			var firstRadio = slideRadio[i];
+			firstRadio = slideRadio[i];
 		}
 	}
+};
+
+btnNext.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	slideButtons();
 	currentCheck.checked=false;	
 	if (currentCheck != finalRadio) {
 		nextRadio.checked=true;
@@ -142,18 +149,7 @@ btnNext.addEventListener("click", function (evt) {
 
 btnBack.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	for (var i = 0; i < slideRadio.length; i++) {
-		if (slideRadio[i].checked) {
-			var currentCheck = slideRadio[i];
-			var prevRadio = slideRadio[i-1];
-		}
-		if (i === slideRadio.length - 1) {
-			var finalRadio = slideRadio[i];
-		}
-		if (i === 0) {
-			var firstRadio = slideRadio[i];
-		}
-	}
+	slideButtons();
 	currentCheck.checked=false;	
 	if (currentCheck != firstRadio) {
 		prevRadio.checked=true;
