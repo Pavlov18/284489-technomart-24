@@ -119,19 +119,25 @@ var sliderContent = slider.querySelector(".slider-content");
 var firstSlide = sliderContent.firstElementChild;
 var finalSlide = sliderContent.lastElementChild;
 
-btnNext.addEventListener("click", function (evt) {
+function slideButtons() {
 	for (var i = 0; i < slideRadio.length; i++) {
 		if (slideRadio[i].checked) {
-			var currentCheck = slideRadio[i];
-			var nextRadio = slideRadio[i+1];
+			currentCheck = slideRadio[i];
+			nextRadio = slideRadio[i+1];
+			prevRadio = slideRadio[i-1];
 		}
 		if (i === slideRadio.length - 1) {
-			var finalRadio = slideRadio[i];
+			 finalRadio = slideRadio[i];
 		}
 		if (i === 0) {
-			var firstRadio = slideRadio[i];
+			firstRadio = slideRadio[i];
 		}
 	}
+};
+
+btnNext.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	slideButtons();
 	currentCheck.checked=false;	
 	if (currentCheck != finalRadio) {
 		nextRadio.checked=true;
@@ -142,18 +148,8 @@ btnNext.addEventListener("click", function (evt) {
 	});
 
 btnBack.addEventListener("click", function (evt) {
-	for (var i = 0; i < slideRadio.length; i++) {
-		if (slideRadio[i].checked) {
-			var currentCheck = slideRadio[i];
-			var prevRadio = slideRadio[i-1];
-		}
-		if (i === slideRadio.length - 1) {
-			var finalRadio = slideRadio[i];
-		}
-		if (i === 0) {
-			var firstRadio = slideRadio[i];
-		}
-	}
+	evt.preventDefault();
+	slideButtons();
 	currentCheck.checked=false;	
 	if (currentCheck != firstRadio) {
 		prevRadio.checked=true;
