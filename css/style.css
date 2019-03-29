@@ -2347,6 +2347,7 @@ a.pagination-current {
 }
 
 .modal-message {
+    z-index: 3;
 	width: 620px;
 	margin-top: -230px;
 }
