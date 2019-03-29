@@ -763,6 +763,7 @@ a.logout {
 }
 
 .promo-item .title {
+	width: 136px;
 	margin: 0;
 	margin-bottom: 12px;
 	line-height: 30px;
@@ -1833,6 +1834,10 @@ fieldset.filter-power {
 	height: 23px;
 
 	background-image: url("../img/checkbox-off.svg");
+}
+.filter-radio:focus + label::before,
+.filter-checkbox:focus + label::before {
+	outline: #EE3643 1px solid;
 }
 
 .filter-checkbox:not(:disabled) + label:hover::before,
