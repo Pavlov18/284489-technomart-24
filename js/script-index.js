@@ -26,7 +26,7 @@ var mapPopup = document.querySelector(".modal-map");
 buttonMap.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	mapPopup.classList.add("modal-show");
- });
+});
 
 login.addEventListener("click", function (evt) {
 	evt.preventDefault();
@@ -62,7 +62,7 @@ buttonwrite.addEventListener("click", function (evt) {
 	}
 });
 
-	closeWrite.addEventListener("click", function (evt) {
+closeWrite.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popupform.classList.remove("modal-show");
 	popupform.classList.remove("modal-error");
@@ -70,7 +70,7 @@ buttonwrite.addEventListener("click", function (evt) {
 
 for (var i = 0; i < buttonsBuy.length; i++) {
 	var buttonBuy = buttonsBuy[i];
-	buttonBuy.addEventListener('click', function (evt) {
+	buttonBuy.addEventListener("click", function (evt) {
 		evt.preventDefault();
 		popupcart.classList.add("modal-show");
 	});
@@ -127,7 +127,7 @@ function slideButtons() {
 			prevRadio = slideRadio[i-1];
 		}
 		if (i === slideRadio.length - 1) {
-			 finalRadio = slideRadio[i];
+			finalRadio = slideRadio[i];
 		}
 		if (i === 0) {
 			firstRadio = slideRadio[i];
@@ -138,23 +138,23 @@ function slideButtons() {
 btnNext.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	slideButtons();
-	currentCheck.checked=false;	
+	currentCheck.checked = false;	
 	if (currentCheck != finalRadio) {
-		nextRadio.checked=true;
+		nextRadio.checked = true;
 	}
 	else {
-		firstRadio.checked=true;
+		firstRadio.checked = true;
 	}
-	});
+});
 
 btnBack.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	slideButtons();
-	currentCheck.checked=false;	
+	currentCheck.checked = false;	
 	if (currentCheck != firstRadio) {
 		prevRadio.checked=true;
 	}
 	else {
-		finalRadio.checked=true;
+		finalRadio.checked = true;
 	}
 });	

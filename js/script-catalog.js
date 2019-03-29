@@ -19,7 +19,7 @@ logout.addEventListener("click", function (evt) {
 
 for (var i = 0; i < buttonsBuy.length; i++) {
 	var buttonBuy = buttonsBuy[i];
-	buttonBuy.addEventListener('click', function (evt) {
+	buttonBuy.addEventListener("click", function (evt) {
 		evt.preventDefault();
 		popupcart.classList.add("modal-show");
 	});
@@ -38,7 +38,7 @@ window.addEventListener("keydown", function (evt) {
 		evt.preventDefault();
 		var modShow = document.querySelectorAll(".modal-show");
 		for (var i = 0; i < modShow.length; i++) {
-modShow[0].classList.remove("modal-show");
+			modShow[0].classList.remove("modal-show");
 		}
 	}
 });
