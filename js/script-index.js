@@ -1,5 +1,3 @@
-document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
-
 var buttonwrite = document.querySelector(".button-write-me");
 var popupform = document.querySelector(".modal-message");
 var closeWrite = document.querySelector(".modal-write-close");
@@ -53,11 +51,12 @@ buttonwrite.addEventListener("click", function (evt) {
 		if (storageEmail) {
 			email.value = storageEmail;
 			message.focus();
-		}
+		}	
 		else {
 			email.fucus();
 		}
-	} else {
+	} 
+	else {
 		fullname.focus();
 	}
 });
@@ -69,7 +68,7 @@ closeWrite.addEventListener("click", function (evt) {
 });
 
 for (var i = 0; i < buttonsBuy.length; i++) {
-	var buttonBuy = buttonsBuy[i];
+	buttonBuy = buttonsBuy[i];
 	buttonBuy.addEventListener("click", function (evt) {
 		evt.preventDefault();
 		popupcart.classList.add("modal-show");
@@ -77,7 +76,7 @@ for (var i = 0; i < buttonsBuy.length; i++) {
 }
 
 for (var i = 0; i < closePopup.length; i++) {
-	var buttonClose = closePopup[i];
+	buttonClose = closePopup[i];
 	buttonClose.addEventListener("click", function (evt) {
 		evt.preventDefault();
 		popupcart.classList.remove("modal-show");
