@@ -968,6 +968,11 @@ a.logout {
 	background-color: #ee3743;
 }
 
+.slide-radio:nth-of-type(1):focus ~ .catalog-indicators label:nth-child(1)::after,
+.slide-radio:nth-of-type(2):focus ~ .catalog-indicators label:nth-child(2)::after {
+    box-shadow: 0 0 1px 4px blue;
+}
+
 .slide-radio:nth-of-type(1):checked ~ .catalog-indicators label:nth-child(1)::after,
 .slide-radio:nth-of-type(2):checked ~ .catalog-indicators label:nth-child(2)::after {
 	display: block;
@@ -1338,6 +1343,8 @@ p.services-description {
 }
 
 .service-list label {
+	position: relative;
+
 	display: block;
 	width: 240px;
 	padding-top: 14px;
@@ -1363,12 +1370,19 @@ p.services-description {
 	cursor: pointer;
 }
 
-
 .service-button:nth-of-type(1):not(:checked):active ~ .service-list label:nth-child(1),
 .service-button:nth-of-type(2):not(:checked):active ~ .service-list label:nth-child(2),
 .service-button:nth-of-type(3):not(:checked):active ~ .service-list label:nth-child(3) {
 	color: #32425C;
 	background-color: #fff;
+}
+
+.service-button:nth-of-type(1):focus ~ .service-list label:nth-child(1),
+.service-button:nth-of-type(2):focus ~ .service-list label:nth-child(2),
+.service-button:nth-of-type(3):focus ~ .service-list label:nth-child(3) {
+	z-index: 1;
+
+	box-shadow: 0 0 1px 2px #EE3643;
 }
 
 .service-button:nth-of-type(1):checked ~ .service-list label:nth-child(1),
@@ -1517,6 +1531,10 @@ p.services-description {
 .index-contacts .company-description {
 	width: 180px;
 	margin-bottom: 31px;
+}
+
+.button-map {
+	font-size: 0;
 }
 
 .index-contacts img {
@@ -1835,9 +1853,14 @@ fieldset.filter-power {
 
 	background-image: url("../img/checkbox-off.svg");
 }
-.filter-radio:focus + label::before,
-.filter-checkbox:focus + label::before {
-	outline: #EE3643 1px solid;
+
+.filter-checkbox:focus + label::before,
+.filter-radio:focus + label::before {
+	box-shadow: 0 0 1px 2px #EE3643;
+}
+
+.filter-radio:focus + label::before {
+	border-radius: 50%;
 }
 
 .filter-checkbox:not(:disabled) + label:hover::before,
@@ -2165,6 +2188,7 @@ a.pagination-current {
 
 .footer-logo-contacts address {
 	display: block;
+	width: 350px;
 	margin-left: 3px;
 
 	font-style: normal;
